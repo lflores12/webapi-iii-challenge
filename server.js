@@ -12,7 +12,7 @@ server.use('/api/users', userRouter);
 server.use('/api/posts', postRouter);
 
 server.get('/', (req, res) => {
-  res.status(200).json({
+  res.send({
     messageOfTheDay: process.env.MOTD
   })
 });
